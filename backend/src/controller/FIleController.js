@@ -13,6 +13,8 @@ class FileController {
         box.files.push(file);
         await box.save(file);
 
+        req.io.sockets.in(box._id).emit('file', file)
+
         console.log('Arquivo', req.file)
 
         return res.json(file);

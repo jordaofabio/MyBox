@@ -59,4 +59,5 @@ typings/
 
 # next.js build output
 .next
-backend/tmp/
+backend/tmp/*
+!backend/tmp/.gitkeep
